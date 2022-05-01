@@ -34,7 +34,7 @@ docker-compose version
  
 1.3	Before starting the ELK stack, run the command given below so that elastic search is configured properly.
 
-sysctl -w vm.max_map_count=262144
+sudo sysctl -w vm.max_map_count=262144
 
 1.4	Run the docker-compose command to initialize the ELK stack.
 
