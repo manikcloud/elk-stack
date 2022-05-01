@@ -67,7 +67,7 @@ Password: <Your_DockerHub_Password>
  
 2.5	Create a Jenkins pipeline job to fetch Jenkinsfile from the URL mentioned below.  
 2.6	You can either use the below git repository or Fork it in your Github account and use it
-https://github.com/Siraj-ul-muneera/ELKExample.git
+https://github.com/manikcloud/elk-stack.git
 
 2.7	Configure the job as shown in the screenshot below and then run the build. 
 
