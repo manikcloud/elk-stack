@@ -53,7 +53,8 @@ http://localhost:5601/app/kibana
 - Notedown your user name.
 1. Goto the Jenkins file.
 2. Replace your docker hub username from varunmanik in line no. 3.
-
+3. run this command 
+- git add . && git commit -am"adding dockerhub user name in jenkins file " && git push 
 
 Step 2: Configure Jenkins pipeline for Docker build and deployment
 2.1	From the browser, navigate to http://localhost:8080 and login to Jenkins.
