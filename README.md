@@ -23,8 +23,8 @@ Step 1: Set up ELK stack on Docker
 1.1	Download Docker compose file in one of the git repositories and follow the set of commands given below to initialize the ELK stack.
 
 sudo su
-git clone https://github.com/Siraj-ul-muneera/ELKExample.git
-cd ELKExample
+git clone https://github.com/manikcloud/elk-stack.git
+cd elk-stack
 ls -alrt
  
 1.2	Start the ELK stack using the docker-compose command. Usually, this binary is not installed on a server. So, follow the set of commands given below to install Docker Compose.
