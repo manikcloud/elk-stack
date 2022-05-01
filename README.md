@@ -58,7 +58,7 @@ http://localhost:5601/app/kibana
 Step 2: Configure Jenkins pipeline for Docker build and deployment
 2.1	From the browser, navigate to http://localhost:8080 and login to Jenkins.
 2.2	Configure your Docker hub credentials in Jenkins. Go to Manage Jenkins -> Manage Credentials -> click on Jenkins link -> click on Global credentials (unrestricted) -> click on Add Credentials from the left pane.
- 
+- http://localhost:8080/credentials/store/system/domain/_/newCredentials 
 2.3	Add the details as shown below
 Username: <Your_DockerHub_Username>
 Password: <Your_DockerHub_Password>
