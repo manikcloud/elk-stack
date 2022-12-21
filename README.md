@@ -1,69 +1,73 @@
 # elk-stack
-creating ELK stack via docker-compose
+
+# Creating ELK stack via docker-compose
 
 ```
 git@github.com:manikcloud/elk-stack.git
 
 
-Lesson 9 Demo 3
-Continuous Monitoring on Docker with ELK Stack
+## Continuous Monitoring on Docker with ELK Stack
 
 
 Steps to be followed:
-1.	Set up ELK stack on Docker
-2.	Configure Jenkins pipeline for Docker build and deployment
-3.	Run the Spring Boot application and check the logs in Kibana
+- 1.	Set up ELK stack on Docker
+- 2.	Configure Jenkins pipeline for Docker build and deployment
+- 3.	Run the Spring Boot application and check the logs in Kibana
 
-Step 1: Set up ELK stack on Docker
-
-
+## Step 1: Set up ELK stack on Docker
 
 
 
-1.1	Download Docker compose file in one of the git repositories and follow the set of commands given below to initialize the ELK stack.
 
+
+### 1.1	Download Docker compose file in one of the git repositories and follow the set of commands given below to initialize the ELK stack.
+
+```
 sudo su
 git clone https://github.com/manikcloud/elk-stack.git
 cd elk-stack
 ls -alrt
- 
-1.2	Start the ELK stack using the docker-compose command. Usually, this binary is not installed on a server. So, follow the set of commands given below to install Docker Compose.
+```
+### 1.2	Start the ELK stack using the docker-compose command. Usually, this binary is not installed on a server. So, follow the set of commands given below to install Docker Compose.
 
+```
 apt install docker-compose
 docker-compose version
- 
-1.3	Before starting the ELK stack, run the command given below so that elastic search is configured properly.
+```
 
+### 1.3	Before starting the ELK stack, run the command given below so that elastic search is configured properly.
+```
 sudo sysctl -w vm.max_map_count=262144
+```
+### 1.4	Run the docker-compose command to initialize the ELK stack.
 
-1.4	Run the docker-compose command to initialize the ELK stack.
-
-
+```
 docker-compose up -d
 docker ps
+```
  
- 
-
- 
-1.5	Open the Kibana URL using the public IP of the host and 5601 port to access the Kibana dashboard.
+### 1.5	Open the Kibana URL using the public IP of the host and 5601 port to access the Kibana dashboard.
 
 http://localhost:5601/app/kibana
 
 ## Logint to docker hub. 
 - Notedown your user name.
-1. Goto the Jenkins file.
-2. Replace your docker hub username from varunmanik in line no. 3.
-3. run this command 
-- git add . && git commit -am"adding dockerhub user name in jenkins file " && git push 
+- 1. Goto the Jenkins file.
+- 2. Replace your docker hub username from varunmanik in line no. 3.
+- 3. run this command 
+```
+ git add . && git commit -am"adding dockerhub user name in jenkins file " && git push 
 
+```
 - Install Docker pipeline plugin in jenkins 
 - http://localhost:8080/pluginManager/
 
-Step 2: Configure Jenkins pipeline for Docker build and deployment
-2.1	From the browser, navigate to http://localhost:8080 and login to Jenkins.
-2.2	Configure your Docker hub credentials in Jenkins. Go to Manage Jenkins -> Manage Credentials -> click on Jenkins link -> click on Global credentials (unrestricted) -> click on Add Credentials from the left pane.
+# Step 2: Configure Jenkins pipeline for Docker build and deployment
+
+- 2.1	From the browser, navigate to http://localhost:8080 and login to Jenkins.
+- 2.2	Configure your Docker hub credentials in Jenkins. Go to Manage Jenkins -> Manage Credentials -> click on Jenkins link -> click on Global credentials (unrestricted) -> click on Add Credentials from the left pane.
 - http://localhost:8080/credentials/store/system/domain/_/newCredentials 
-2.3	Add the details as shown below
+## 2.3	Add the details as shown below
 Username: <Your_DockerHub_Username>
 Password: <Your_DockerHub_Password>
  
