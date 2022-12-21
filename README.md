@@ -2,8 +2,7 @@
 
 # Creating ELK stack via docker-compose
 
-```
-git@github.com:manikcloud/elk-stack.git
+### git@github.com:manikcloud/elk-stack.git
 
 
 ## Continuous Monitoring on Docker with ELK Stack
@@ -15,9 +14,6 @@ Steps to be followed:
 - 3.	Run the Spring Boot application and check the logs in Kibana
 
 ## Step 1: Set up ELK stack on Docker
-
-
-
 
 
 ### 1.1	Download Docker compose file in one of the git repositories and follow the set of commands given below to initialize the ELK stack.
