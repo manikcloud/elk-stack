@@ -67,40 +67,40 @@ http://localhost:5601/app/kibana
 Username: <Your_DockerHub_Username>
 Password: <Your_DockerHub_Password>
  
-2.4	You should now see the credentials saved as shown below
+- 2.4	You should now see the credentials saved as shown below
  
-2.5	Create a Jenkins pipeline job to fetch Jenkinsfile from the URL mentioned below.  
-2.6	You can either use the below git repository or Fork it in your Github account and use it
+- 2.5	Create a Jenkins pipeline job to fetch Jenkinsfile from the URL mentioned below.  
+- 2.6	You can either use the below git repository or Fork it in your Github account and use it
 https://github.com/manikcloud/elk-stack.git
 
-2.7	Configure the job as shown in the screenshot below and then run the build. 
+- 2.7	Configure the job as shown in the screenshot below and then run the build. 
 
  
-2.8	Give 777 permission to the Docker sock file since we are running Docker command from a Jenkins user.
-
+- 2.8	Give 777 permission to the Docker sock file since we are running Docker command from a Jenkins user.
+```
 chmod 777 /var/run/docker.sock
-
+```
  
-2.9	Build the Jenkins job to deploy the Docker container on the Docker host. 
+- 2.9	Build the Jenkins job to deploy the Docker container on the Docker host. 
 
-2.10	Jenkins pipeline will complete the build and the deployment process for the Spring Boot application
+- 2.10	Jenkins pipeline will complete the build and the deployment process for the Spring Boot application
  
  
-2.11	We can see the Docker container deployed on the Docker host using the command:
+- 2.11	We can see the Docker container deployed on the Docker host using the command:
 
+```
 docker ps | grep springbootapp
+```
 
- 
+## Step 3: Run the Spring Boot application and check the logs in Kibana
 
-Step 3: Run the Spring Boot application and check the logs in Kibana
-
-3.1	Access the Spring Boot web application and perform some random activity so that the logs will be pushed to ELK stack.
+- 3.1	Access the Spring Boot web application and perform some random activity so that the logs will be pushed to ELK stack.
 
 http://localhost:81
  
-3.2	Check the logs pushed to ELK stack in Kibana.
+- 3.2	Check the logs pushed to ELK stack in Kibana.
 
-3.3	Navigate to the Kibana dashboard. Select Management > Index Management from the navigation bar on the left. You can see the logs created.
+- 3.3	Navigate to the Kibana dashboard. Select Management > Index Management from the navigation bar on the left. You can see the logs created.
 
  
 
