@@ -19,11 +19,12 @@ node {
     }
 
     stage('Deploy') {
-        sh ("docker run -d -p 81:8080 -v /var/log/:/var/log/ ${dockerhubaccountid}/${application}:${BUILD_NUMBER}")
+        sh ("docker stop ${application} || true && docker rm ${application} || true")
+        sh ("docker run -d --name ${application} -p 81:8080 -v /var/log/:/var/log/ ${dockerhubaccountid}/${application}:${BUILD_NUMBER}")
     }
     
     stage('Remove old images') {
         // remove docker old images
-        sh("docker rmi ${dockerhubaccountid}/${application}:latest -f")
+        sh("docker image prune -f")
     }
 }
