@@ -26,6 +26,6 @@ node {
     
     stage('Remove old images') {
         // remove docker old images
-        sh("docker rmi $(docker images -q ${dockerhubaccountid}/${application} | awk 'NR>3') -f || true")
+        sh('docker rmi $(docker images -q ' + dockerhubaccountid + '/' + application + ' | awk \'NR>3\') -f || true')
     }
 }
