@@ -1,5 +1,3 @@
-# elk-stack
-
 # Creating ELK stack via docker-compose
 
 ### git@github.com:manikcloud/elk-stack.git
